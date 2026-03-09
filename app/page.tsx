@@ -1,6 +1,9 @@
-import Image from "next/image";
+import Home from "@/components/Home/Home";
+import { Button } from "@/components/ui/button";
 
-export default function Home() {
-  return <div></div>;
+export default function HomePage() {
+  return (
+    <Home />
+  );
   
 }
