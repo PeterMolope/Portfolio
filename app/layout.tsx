@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import Provider from "@/components/Hoc/Provider";
+import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
 
 const jetBrainsMono = JetBrains_Mono({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
@@ -26,11 +28,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={`${inter.className} antialiased`}>
-        Navbar
-        {children}
-        Footer
+        <Provider>
+          <ResponsiveNav />
+          {children}
+        </Provider>
       </body>
     </html>
   );

@@ -1,3 +1,5 @@
+import ThemeToggler from "../Helper/ThemeToggler";
+
 export default function Home() {
-  return <div className="overflow-hidden">Home</div>;
+  return <div className="overflow-hidden">HOMEs</div>;
 }
