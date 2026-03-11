@@ -1,12 +1,33 @@
+"use client";
 import Logo from "@/components/Helper/Logo";
+import ThemeToggler from "@/components/Helper/ThemeToggler";
 import { Navlinks } from "@/Constant/Constant";
-import { Download } from "lucide-react";
+import { Download, MenuIcon } from "lucide-react";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Nav = () => {
+  const [navBg, setNavBg] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 90) {
+        setNavBg(true);
+      } else {
+        setNavBg(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="transition-all duration-200 h-[12vh] z-100 fixed w-full ">
+    <div
+      className={`transition-all ${navBg ? "dark:bg-gray-800 bg-white shadow-md" : "fixed"} duration-200 h-[12vh] z-100 fixed w-full `}
+    >
       <div className="h-full flex items-center justify-between w-[90%] xl:w-[80%] mx-auto">
         {/**Logo**/}
         <Logo />
@@ -24,7 +45,7 @@ const Nav = () => {
             );
           })}
         </div>
-        {/**Buttons**/}
+        {/**CV Button**/}
         <div className="flex items-center space-x-4">
           <a
             href="#_"
@@ -36,6 +57,12 @@ const Nav = () => {
             </span>
           </a>
         </div>
+
+        {/**theme Button**/}
+        <ThemeToggler />
+        {/**Mobile Menu Button**/}
+
+        <MenuIcon className="w-8 h-8 text-black dark:text-white lg:hidden cursor-pointer" />
       </div>
     </div>
   );
