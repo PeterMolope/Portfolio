@@ -6,7 +6,10 @@ import { Download, MenuIcon } from "lucide-react";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
 
-const Nav = () => {
+type NavProps = {
+  openMobileNav: () => void;
+};
+const Nav = ({ openMobileNav }: NavProps) => {
   const [navBg, setNavBg] = useState(false);
   useEffect(() => {
     const handleScroll = () => {
@@ -62,7 +65,10 @@ const Nav = () => {
         <ThemeToggler />
         {/**Mobile Menu Button**/}
 
-        <MenuIcon className="w-8 h-8 text-black dark:text-white lg:hidden cursor-pointer" />
+        <MenuIcon
+          onClick={openMobileNav}
+          className="w-8 h-8 text-black dark:text-white lg:hidden cursor-pointer"
+        />
       </div>
     </div>
   );
