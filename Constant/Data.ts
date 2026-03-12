@@ -22,17 +22,17 @@ import {
 import { FaGithub, FaLinkedin, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
 
 export const stats = [
-  { label: "Years Experience", value: "5+" },
+  { label: "Years Experience", value: "1+" },
   { label: "Projects Completed", value: "50+" },
   { label: "Happy Clients", value: "30+" },
-  { label: "Students Taught", value: "1000+" },
+  { label: "Students Taught", value: "5+" },
 ];
 
 export const highlights = [
-  { icon: MapPin, text: "Based in San Francisco, CA" },
-  { icon: Briefcase, text: "Open for freelance work" },
-  { icon: GraduationCap, text: "CS Graduate from Stanford" },
-  { icon: Coffee, text: "Powered by coffee & curiosity" },
+  { icon: MapPin, text: "Based in Johannesburg, GP" },
+  { icon: Briefcase, text: "Open for Permanent and freelance work" },
+  { icon: GraduationCap, text: "CS Graduate from University of Johannesburg" },
+  { icon: Coffee, text: "Powered by Coffee & Creativity" },
 ];
 
 export const userReviewData = [
@@ -74,27 +74,31 @@ export const contactInfo = [
   {
     icon: Mail,
     label: "Email",
-    value: "hello@johndoe.dev",
-    href: "mailto:hello@johndoe.dev",
+    value: "ptrmolope@gmail.com",
+    href: "mailto:ptrmolope@gmail.com",
   },
   {
     icon: Phone,
     label: "Phone",
-    value: "+1 (555) 123-4567",
-    href: "tel:+15551234567",
+    value: "+27 (073) 318-8475",
+    href: "tel:+27733188475",
   },
   {
     icon: MapPin,
     label: "Location",
-    value: "San Francisco, CA",
+    value: "Johannesburg Francisco, CA",
     href: "#",
   },
 ];
 
 export const socialLinks = [
-  { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-  { icon: FaLinkedinIn, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
+  { icon: FaGithub, href: "https://github.com/PeterMolope", label: "GitHub" },
+  {
+    icon: FaLinkedinIn,
+    href: "https://www.linkedin.com/in/petermolope-mxv/",
+    label: "LinkedIn",
+  },
+  { icon: FaTwitter, href: "https://twitter.com/PeterMXV", label: "Twitter" },
 ];
 
 export const experiences = [
