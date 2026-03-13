@@ -39,6 +39,12 @@ const Hero = () => {
             className="font-mono"
           />
         </div>
+
+        {/* description */}
+        <p>
+          A high-performance, full-stack web application built with Next.js 16,
+          designed for scalability and seamless user experiences.
+        </p>
       </div>
     </div>
   );
