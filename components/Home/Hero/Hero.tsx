@@ -41,7 +41,7 @@ const Hero = () => {
         </div>
 
         {/* description */}
-        <p>
+        <p className="text-lg dark:text-gray-200 max-w-2xl mx-auto mb-10">
           A high-performance, full-stack web application built with Next.js 16,
           designed for scalability and seamless user experiences.
         </p>
