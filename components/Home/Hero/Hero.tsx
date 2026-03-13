@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import { TypeAnimation } from "react-type-animation";
 
 const Hero = () => {
   return (
@@ -18,6 +20,25 @@ const Hero = () => {
             Peter Molope
           </span>
         </h1>
+        {/* type witer animation */}
+
+        <div className="text-xl sm:text-2xl md:text-3xl text-black dark:text-white font-semibold mb-4 sm:mb-8 h-12">
+          <TypeAnimation
+            sequence={[
+              "Full Stack Developer",
+              2000,
+              "Software Engineer",
+              2000,
+              "Problem Solver",
+              2000,
+            ]}
+            wrapper="span"
+            speed={50}
+            cursor={true}
+            repeat={Infinity}
+            className="font-mono"
+          />
+        </div>
       </div>
     </div>
   );
