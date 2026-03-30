@@ -1,55 +1,15 @@
 "use client";
 import React from "react";
 import { Briefcase, GraduationCap } from "lucide-react";
+import { experiences } from "@/Constant/Data";
 
 const Experience = () => {
-  const timelineItems = [
-    {
-      type: "work",
-      date: "2022 - Present",
-      title: "Senior Full-Stack Developer",
-      company: "TechCorp Inc.",
-      description: "Leading development of enterprise SaaS products. Mentoring junior developers and implementing best practices.",
-      tags: ["React", "Node.js", "AWS", "TypeScript"],
-      position: "right",
-    },
-    {
-      type: "work",
-      date: "2020 - 2022",
-      title: "Full-Stack Developer",
-      company: "StartupXYZ",
-      description: "Built and maintained multiple web applications. Collaborated with design team to implement responsive UIs.",
-      tags: ["Vue.js", "Python", "PostgreSQL", "Docker"],
-      position: "left",
-    },
-    {
-      type: "education",
-      date: "2018 - 2020",
-      title: "Master of Computer Science",
-      company: "Stanford University",
-      description: "Specialized in distributed systems and machine learning. Thesis on scalable microservices architecture.",
-      tags: ["Research", "AI/ML", "Distributed Systems"],
-      position: "right",
-    },
-    {
-      type: "work",
-      date: "2018 - 2020",
-      title: "Junior Developer",
-      company: "WebAgency Co.",
-      description: "Developed client websites and e-commerce platforms. Gained experience in agile methodologies.",
-      tags: ["JavaScript", "PHP", "MySQL", "WordPress"],
-      position: "left",
-    },
-    {
-      type: "education",
-      date: "2014 - 2018",
-      title: "Bachelor of Computer Science",
-      company: "UC Berkeley",
-      description: "Strong foundation in algorithms, data structures, and software engineering principles.",
-      tags: ["Computer Science", "Mathematics", "Problem Solving"],
-      position: "right",
-    },
-  ];
+  const timelineItems = experiences.map((item, index) => ({
+    ...item,
+    date: item.period,
+    tags: item.technologies,
+    position: index % 2 === 0 ? "right" : "left",
+  }));
 
   return (
     <div id="experience" className="py-16 bg-gray-100 dark:bg-gray-950">

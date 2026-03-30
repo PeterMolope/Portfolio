@@ -11,7 +11,7 @@ const Hero = () => {
         <div className="sm:mb-6">
           <span className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-gray-600 text-sm text-muted-foreground dark:text-gray-200 mb-8">
             <span className="w-2 h-2 rounded-full bg-green-500"></span>
-            Available for opportunities
+             On the market for a Job
           </span>
         </div>
 

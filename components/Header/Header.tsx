@@ -1,9 +1,20 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Menu, X, Download, SquareCode } from "lucide-react";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isScrolled = window.scrollY > 20;
+      setScrolled(isScrolled);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -21,14 +32,16 @@ const Header = () => {
 
   return (
     <>
-      <div className="transition-all fixed duration-200 h-[12vh] z-100 fixed w-full">
+      <div className={`transition-all fixed duration-200 h-[12vh] z-100 fixed w-full ${
+        scrolled ? "bg-white/90 dark:bg-gray-900/90 backdrop-blur-sm" : ""
+      }`}>
         <div className="flex items-center h-full justify-between w-[90%] xl:w-[80%] mx-auto">
           <div className="flex items-center space-x-2">
             <div className="bg-blue-800 dark:bg-blue-400 w-10 h-10 rounded-lg flex items-center justify-center flex-col">
               <SquareCode className="text-white w-6 h-6" />
             </div>
             <h1 className="sm:text-xl hidden sm:block md:text-2xl text-blue-800 dark:text-blue-400 font-bold">
-              &lt;Dev/&gt;
+              &lt;Peter/&gt;
             </h1>
           </div>
 

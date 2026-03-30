@@ -24,14 +24,14 @@ import { FaGithub, FaLinkedin, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
 export const stats = [
   { label: "Years Experience", value: "1+" },
   { label: "Projects Completed", value: "50+" },
-  { label: "Happy Clients", value: "30+" },
+  { label: "Happy Clients", value: "2+" },
   { label: "Students Taught", value: "5+" },
 ];
 
 export const highlights = [
   { icon: MapPin, text: "Based in Johannesburg, GP" },
   { icon: Briefcase, text: "Open for Permanent and freelance work" },
-  { icon: GraduationCap, text: "CS Graduate from University of Johannesburg" },
+  { icon: GraduationCap, text: "CS Graduate from the University of Johannesburg" },
   { icon: Coffee, text: "Powered by Coffee & Creativity" },
 ];
 
@@ -86,8 +86,8 @@ export const contactInfo = [
   {
     icon: MapPin,
     label: "Location",
-    value: "Johannesburg Francisco, CA",
-    href: "#",
+    value: "Johannesburg, GP",
+    href: "https://www.google.com/maps/place/Johannesburg/@-26.1715215,28.0400245,12z/data=!3m1!4b1!4m6!3m5!1s0x1e950c68f0406a51:0x238ac9d9b1d34041!8m2!3d-26.205647!4d28.0337185!16zL20vMGcyODQ?entry=ttu&g_ep=EgoyMDI2MDMyNC4wIKXMDSoASAFQAw%3D%3D",
   },
 ];
 
@@ -103,57 +103,31 @@ export const socialLinks = [
 
 export const experiences = [
   {
-    type: "work",
-    title: "Senior Full-Stack Developer",
-    company: "TechCorp Inc.",
-    period: "2022 - Present",
-    description:
-      "Leading development of enterprise SaaS products. Mentoring junior developers and implementing best practices.",
-    technologies: ["React", "Node.js", "AWS", "TypeScript"],
-  },
-  {
-    type: "work",
-    title: "Full-Stack Developer",
-    company: "StartupXYZ",
-    period: "2020 - 2022",
-    description:
-      "Built and maintained multiple web applications. Collaborated with design team to implement responsive UIs.",
-    technologies: ["Vue.js", "Python", "PostgreSQL", "Docker"],
-  },
-  {
     type: "education",
-    title: "Master of Computer Science",
-    company: "Stanford University",
-    period: "2018 - 2020",
+    title: "BSc Computer Science and Informatics",
+    company: "University of Johannesburg",
+    period: "2018 - 2022",
     description:
-      "Specialized in distributed systems and machine learning. Thesis on scalable microservices architecture.",
-    technologies: ["Research", "AI/ML", "Distributed Systems"],
+      "Mastery of the full Software Development Life Cycle (SDLC). You gained proficiency in high-level languages like C#, Java, and JavaScript, with a strong focus on object-oriented programming (OOP).",
+    technologies: ["C#", "Java", "Visual Studio", ".Net", "SQL"],
   },
   {
     type: "work",
-    title: "Junior Developer",
-    company: "WebAgency Co.",
-    period: "2018 - 2020",
+    title: "Servide Desk Intern",
+    
+    company: "Turrito Networks",
+    period: "2024 - 2025",
     description:
-      "Developed client websites and e-commerce platforms. Gained experience in agile methodologies.",
-    technologies: ["JavaScript", "PHP", "MySQL", "WordPress"],
-  },
-  {
-    type: "education",
-    title: "Bachelor of Computer Science",
-    company: "UC Berkeley",
-    period: "2014 - 2018",
-    description:
-      "Strong foundation in algorithms, data structures, and software engineering principles.",
-    technologies: ["Computer Science", "Mathematics", "Problem Solving"],
+      "I provided comprehensive 1st Line Support focusing on Microsoft 365 and Azure administration. My expertise includes managing the onboarding lifecycle, providing high-volume remote assistance, and utilizing Auvik for real-time network monitoring. With a strong foundation in hardware diagnostics and AZ-900 certified cloud knowledge, I ensure that user issues are resolved quickly while maintaining the integrity of the broader company infrastructure.",
+    technologies: ["Microsoft 365", "Microsoft Azure", "Uptime robot", "Auvik", "ConnectWise"],
   },
 ];
 
 export const footerSocialLinks = [
-  { icon: FaGithub, href: "https://github.com", label: "GitHub" },
-  { icon: FaLinkedin, href: "https://linkedin.com", label: "LinkedIn" },
-  { icon: FaTwitter, href: "https://twitter.com", label: "Twitter" },
-  { icon: Mail, href: "mailto:hello@example.com", label: "Email" },
+  { icon: FaGithub, href: "https://github.com/PeterMolope", label: "GitHub" },
+  { icon: FaLinkedinIn, href: "https://www.linkedin.com/in/petermolope-mxv/", label: "LinkedIn" },
+  { icon: FaTwitter, href: "https://twitter.com/PeterMXV", label: "Twitter" },
+  { icon: Mail, href: "mailto:ptrmolope@gmail.com", label: "Email" },
 ];
 
 export const projects = [
@@ -241,7 +215,7 @@ export const skillCategories = [
     skills: [
       { name: "Git", icon: GitBranch },
       { name: "Docker", icon: Server },
-      { name: "AWS", icon: Cloud },
+      { name: "Azure", icon: Cloud },
       { name: "Linux", icon: Terminal },
       { name: "Figma", icon: Palette },
       { name: "CI/CD", icon: Cpu },

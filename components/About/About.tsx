@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { MapPin, Briefcase, GraduationCap, Coffee } from "lucide-react";
+import { stats, highlights } from "@/Constant/Data";
 
 const About = () => {
   return (
@@ -25,7 +26,7 @@ const About = () => {
               decoding="async"
               className="w-full h-full object-center rounded-xl"
               style={{ color: "transparent" }}
-              src="/images/user.jpg"
+              src="/images/main-user.png"
             />
           </div>
         </div>
@@ -40,52 +41,29 @@ const About = () => {
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
-            <div className="flex items-center gap-3 text-sm">
-              <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
-                <MapPin className="w-4 h-4 text-blue-500" />
-              </div>
-              <span className="text-muted-foreground">Based in San Francisco, CA</span>
-            </div>
-            <div className="flex items-center gap-3 text-sm">
-              <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
-                <Briefcase className="w-4 h-4 text-blue-500" />
-              </div>
-              <span className="text-muted-foreground">Open for freelance work</span>
-            </div>
-            <div className="flex items-center gap-3 text-sm">
-              <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
-                <GraduationCap className="w-4 h-4 text-blue-500" />
-              </div>
-              <span className="text-muted-foreground">CS Graduate from Stanford</span>
-            </div>
-            <div className="flex items-center gap-3 text-sm">
-              <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
-                <Coffee className="w-4 h-4 text-blue-500" />
-              </div>
-              <span className="text-muted-foreground">Powered by coffee & curiosity</span>
-            </div>
+            {highlights.map((highlight, index) => {
+              const Icon = highlight.icon;
+              return (
+                <div key={index} className="flex items-center gap-3 text-sm">
+                  <div className="w-8 h-8 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                    <Icon className="w-4 h-4 text-blue-500" />
+                  </div>
+                  <span className="text-muted-foreground">{highlight.text}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>
 
       <div className="mt-16 w-[80%] mx-auto">
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-6">
-          <div className="bg-white dark:bg-gray-800 shadow rounded-xl p-6 text-center">
-            <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">5+</div>
-            <div className="text-sm text-muted-foreground">Years Experience</div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 shadow rounded-xl p-6 text-center">
-            <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">50+</div>
-            <div className="text-sm text-muted-foreground">Projects Completed</div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 shadow rounded-xl p-6 text-center">
-            <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">30+</div>
-            <div className="text-sm text-muted-foreground">Happy Clients</div>
-          </div>
-          <div className="bg-white dark:bg-gray-800 shadow rounded-xl p-6 text-center">
-            <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">1000+</div>
-            <div className="text-sm text-muted-foreground">Students Taught</div>
-          </div>
+          {stats.map((stat, index) => (
+            <div key={index} className="bg-white dark:bg-gray-800 shadow rounded-xl p-6 text-center">
+              <div className="text-3xl md:text-4xl font-bold text-purple-600 mb-2">{stat.value}</div>
+              <div className="text-sm text-muted-foreground">{stat.label}</div>
+            </div>
+          ))}
         </div>
       </div>
     </div>

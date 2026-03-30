@@ -1,6 +1,7 @@
 "use client";
 import React, { useState } from "react";
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from "lucide-react";
+import { Send } from "lucide-react";
+import { contactInfo, socialLinks } from "@/Constant/Data";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -45,73 +46,37 @@ const Contact = () => {
             </div>
 
             <div className="space-y-4">
-              <a
-                href="mailto:peter@example.com"
-                target="_blank"
-                className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 shadow-md rounded-xl hover:scale-105 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 rounded-lg bg-blue-600/10 flex items-center justify-center group-hover:bg-blue-600/20 transition-colors">
-                  <Mail className="w-5 h-5 text-blue-500 dark:text-white" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Email</p>
-                  <p className="font-medium">peter@example.com</p>
-                </div>
-              </a>
-
-              <a
-                href="tel:+15551234567"
-                target="_blank"
-                className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 shadow-md rounded-xl hover:scale-105 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 rounded-lg bg-blue-600/10 flex items-center justify-center group-hover:bg-blue-600/20 transition-colors">
-                  <Phone className="w-5 h-5 text-blue-500 dark:text-white" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Phone</p>
-                  <p className="font-medium">+1 (555) 123-4567</p>
-                </div>
-              </a>
-
-              <a
-                href="#"
-                target="_blank"
-                className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 shadow-md rounded-xl hover:scale-105 transition-all duration-300 group"
-              >
-                <div className="w-12 h-12 rounded-lg bg-blue-600/10 flex items-center justify-center group-hover:bg-blue-600/20 transition-colors">
-                  <MapPin className="w-5 h-5 text-blue-500 dark:text-white" />
-                </div>
-                <div>
-                  <p className="text-sm text-muted-foreground">Location</p>
-                  <p className="font-medium">San Francisco, CA</p>
-                </div>
-              </a>
+              {contactInfo.map((contact, index) => (
+                <a
+                  key={index}
+                  href={contact.href}
+                  target="_blank"
+                  className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 shadow-md rounded-xl hover:scale-105 transition-all duration-300 group"
+                >
+                  <div className="w-12 h-12 rounded-lg bg-blue-600/10 flex items-center justify-center group-hover:bg-blue-600/20 transition-colors">
+                    <contact.icon className="w-5 h-5 text-blue-500 dark:text-white" />
+                  </div>
+                  <div>
+                    <p className="text-sm text-muted-foreground">{contact.label}</p>
+                    <p className="font-medium">{contact.value}</p>
+                  </div>
+                </a>
+              ))}
             </div>
 
             <div>
               <h4 className="text-lg font-medium mb-4">Follow Me</h4>
               <div className="flex gap-3">
-                <a
-                  href="https://github.com"
-                  target="_blank"
-                  className="w-12 h-12 rounded-xl bg-white dark:bg-gray-800 flex items-center justify-center text-muted-foreground hover:text-blue-500 transition-colors"
-                >
-                  <Github className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://linkedin.com"
-                  target="_blank"
-                  className="w-12 h-12 rounded-xl bg-white dark:bg-gray-800 flex items-center justify-center text-muted-foreground hover:text-blue-500 transition-colors"
-                >
-                  <Linkedin className="w-5 h-5" />
-                </a>
-                <a
-                  href="https://twitter.com"
-                  target="_blank"
-                  className="w-12 h-12 rounded-xl bg-white dark:bg-gray-800 flex items-center justify-center text-muted-foreground hover:text-blue-500 transition-colors"
-                >
-                  <Twitter className="w-5 h-5" />
-                </a>
+                {socialLinks.map((social, index) => (
+                  <a
+                    key={index}
+                    href={social.href}
+                    target="_blank"
+                    className="w-12 h-12 rounded-xl bg-white dark:bg-gray-800 flex items-center justify-center text-muted-foreground hover:text-blue-500 transition-colors"
+                  >
+                    <social.icon className="w-5 h-5" />
+                  </a>
+                ))}
               </div>
             </div>
           </div>

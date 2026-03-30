@@ -1,58 +1,8 @@
 "use client";
 import React from "react";
-import { 
-  CodeXml, 
-  Globe, 
-  Terminal, 
-  Palette, 
-  Smartphone, 
-  PanelsTopLeft,
-  Server,
-  Layers,
-  Database,
-  Cpu,
-  Cloud,
-  GitBranch,
-  Coffee
-} from "lucide-react";
+import { skillCategories } from "@/Constant/Data";
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Frontend",
-      skills: [
-        { name: "React", icon: CodeXml },
-        { name: "Next.js", icon: Globe },
-        { name: "TypeScript", icon: Terminal },
-        { name: "Tailwind CSS", icon: Palette },
-        { name: "React Native", icon: Smartphone },
-        { name: "Vue.js", icon: PanelsTopLeft },
-      ],
-    },
-    {
-      title: "Backend",
-      skills: [
-        { name: "Node.js", icon: Server },
-        { name: "Express", icon: Layers },
-        { name: "MongoDB", icon: Database },
-        { name: "PostgreSQL", icon: Database },
-        { name: "GraphQL", icon: Cpu },
-        { name: "REST APIs", icon: Cloud },
-      ],
-    },
-    {
-      title: "Tools & Others",
-      skills: [
-        { name: "Git", icon: GitBranch },
-        { name: "Docker", icon: Server },
-        { name: "AWS", icon: Cloud },
-        { name: "Linux", icon: Terminal },
-        { name: "Figma", icon: Palette },
-        { name: "CI/CD", icon: Cpu },
-      ],
-    },
-  ];
-
   return (
     <div id="skills" className="py-16 bg-gray-100 dark:bg-gray-950">
       <div className="text-center mb-16">
@@ -65,14 +15,14 @@ const Skills = () => {
       </div>
 
       <div className="space-y-12 w-[80%] mx-auto">
-        {skillCategories.map((category, categoryIndex) => (
+        {skillCategories.map((category) => (
           <div key={category.title}>
             <h3 className="text-xl font-semibold mb-6 flex items-center gap-3">
               <span className="w-2 h-2 rounded-full bg-purple-600"></span>
               {category.title}
             </h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
-              {category.skills.map((skill, skillIndex) => {
+              {category.skills.map((skill) => {
                 const Icon = skill.icon;
                 return (
                   <div
