@@ -29,13 +29,13 @@ export default function About() {
             }
 
             // Extract numbers from stat values (e.g., "1+" -> 1, "50+" -> 50)
-            const projectsValue = parseInt(stats[1].value.replace(/\D/g, ''))
             const yearsValue = parseInt(stats[0].value.replace(/\D/g, ''))
+            const projectsValue = parseInt(stats[1].value.replace(/\D/g, ''))
             const clientsValue = parseInt(stats[2].value.replace(/\D/g, ''))
             const studentsValue = parseInt(stats[3].value.replace(/\D/g, ''))
 
-            animateValue(0, projectsValue, 2000, 'projects')
             animateValue(0, yearsValue, 2000, 'years')
+            animateValue(0, projectsValue, 2000, 'projects')
             animateValue(0, clientsValue, 2000, 'clients')
             animateValue(0, studentsValue, 2000, 'students')
             

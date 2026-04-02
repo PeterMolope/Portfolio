@@ -22,8 +22,8 @@ import {
 import { FaGithub, FaLinkedin, FaLinkedinIn, FaTwitter } from "react-icons/fa6";
 
 export const stats = [
-  { label: "Years Experience", value: "1+" },
-  { label: "Projects Completed", value: "50+" },
+  { label: "Years Experience", value: "9+" },
+  { label: "Projects Completed", value: "1+" },
   { label: "Happy Clients", value: "2+" },
   { label: "Students Taught", value: "5+" },
 ];
