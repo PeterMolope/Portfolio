@@ -44,7 +44,7 @@ export default function Hero() {
       <div className="hero-container">
         <div className="hero-content">
           <div className="hero-greeting">
-            <span className="greeting-text">Hello, I'm Peter Molope</span>
+            <span className="greeting-text">Hello, I'm</span>
             <span className="greeting-cursor">|</span>
           </div>
           

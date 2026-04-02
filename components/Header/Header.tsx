@@ -60,7 +60,7 @@ export default function Header() {
         <div className="nav-brand">
           <a href="#" className="brand-logo">
             <span className="logo-bracket">&lt;</span>
-            <span className="logo-text">Dev</span>
+            <span className="logo-text">Peter</span>
             <span className="logo-bracket">/&gt;</span>
           </a>
         </div>
@@ -82,7 +82,7 @@ export default function Header() {
         <div className="nav-controls">
           <button className="lang-toggle" onClick={toggleLang} title="Toggle Language">
             <i className="fas fa-language"></i>
-            <span className="lang-text">{currentLang === 'en' ? 'AR' : 'EN'}</span>
+            <span className="lang-text">{currentLang === 'en' ? 'EN' : 'EN'}</span>
           </button>
           <button className="theme-toggle" onClick={toggleTheme} title="Toggle Theme">
             <i className={`fas fa-${currentTheme === 'dark' ? 'sun' : 'moon'}`}></i>
