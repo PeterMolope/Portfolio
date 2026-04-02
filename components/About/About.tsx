@@ -1,9 +1,10 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import { stats, highlights } from '../../Constant/Data'
 
 export default function About() {
-  const [animatedStats, setAnimatedStats] = useState({ projects: 0, years: 0, clients: 0 })
+  const [animatedStats, setAnimatedStats] = useState({ projects: 0, years: 0, clients: 0, students: 0 })
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -27,9 +28,16 @@ export default function About() {
               window.requestAnimationFrame(step)
             }
 
-            animateValue(0, 50, 2000, 'projects')
-            animateValue(0, 5, 2000, 'years')
-            animateValue(0, 30, 2000, 'clients')
+            // Extract numbers from stat values (e.g., "1+" -> 1, "50+" -> 50)
+            const projectsValue = parseInt(stats[1].value.replace(/\D/g, ''))
+            const yearsValue = parseInt(stats[0].value.replace(/\D/g, ''))
+            const clientsValue = parseInt(stats[2].value.replace(/\D/g, ''))
+            const studentsValue = parseInt(stats[3].value.replace(/\D/g, ''))
+
+            animateValue(0, projectsValue, 2000, 'projects')
+            animateValue(0, yearsValue, 2000, 'years')
+            animateValue(0, clientsValue, 2000, 'clients')
+            animateValue(0, studentsValue, 2000, 'students')
             
             observer.unobserve(entry.target)
           }
@@ -63,62 +71,34 @@ export default function About() {
           <div className="about-text-wrapper">
             <div className="about-intro">
               <p className="about-text">
-                I'm a passionate Full Stack Developer with over 5 years of experience in building modern web applications and mobile solutions. I specialize in JavaScript technologies, React, Node.js, and creating beautiful user interfaces.
+                I'm a passionate Full Stack Developer with expertise in modern web technologies and a strong foundation in computer science. 
+                I specialize in creating exceptional digital experiences, from enterprise applications to innovative solutions.
               </p>
             </div>
             
             <div className="about-stats">
-              <div className="stat-item">
-                <div className="stat-number" data-count="50">{animatedStats.projects}</div>
-                <div className="stat-label">Projects</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number" data-count="5">{animatedStats.years}</div>
-                <div className="stat-label">Years Experience</div>
-              </div>
-              <div className="stat-item">
-                <div className="stat-number" data-count="30">{animatedStats.clients}</div>
-                <div className="stat-label">Happy Clients</div>
-              </div>
+              {stats.map((stat, index) => (
+                <div key={index} className="stat-item">
+                  <div className="stat-number" data-count={stat.value}>
+                    {animatedStats[Object.keys(animatedStats)[index] as keyof typeof animatedStats]}
+                  </div>
+                  <div className="stat-label">{stat.label}</div>
+                </div>
+              ))}
             </div>
           </div>
           
           <div className="about-image-wrapper">
             <div className="about-image-container">
-              <div className="code-block">
-                <div className="code-line">
-                  <span className="code-keyword">const</span>
-                  <span className="code-variable">developer</span>
-                  <span className="code-operator">=</span>
-                  <span className="code-brace">{'{'}</span>
-                </div>
-                <div className="code-line indent">
-                  <span className="code-property">name</span>
-                  <span className="code-operator">:</span>
-                  <span className="code-string">'Developer'</span>
-                  <span className="code-comma">,</span>
-                </div>
-                <div className="code-line indent">
-                  <span className="code-property">skills</span>
-                  <span className="code-operator">:</span>
-                  <span className="code-bracket">[</span>
-                  <span className="code-string">'React'</span>
-                  <span className="code-comma">,</span>
-                  <span className="code-string">'Node.js'</span>
-                  <span className="code-comma">,</span>
-                  <span className="code-string">'TypeScript'</span>
-                  <span className="code-bracket">]</span>
-                  <span className="code-comma">,</span>
-                </div>
-                <div className="code-line indent">
-                  <span className="code-property">passion</span>
-                  <span className="code-operator">:</span>
-                  <span className="code-string">'Coding'</span>
-                </div>
-                <div className="code-line">
-                  <span className="code-brace">{'}'}</span>
-                  <span className="code-semicolon">;</span>
-                </div>
+              <div className="highlights-list">
+                {highlights.map((highlight, index) => (
+                  <div key={index} className="highlight-item">
+                    <div className="highlight-icon">
+                      <highlight.icon size={24} />
+                    </div>
+                    <div className="highlight-text">{highlight.text}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>

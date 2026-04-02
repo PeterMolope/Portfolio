@@ -51,7 +51,7 @@ export default function Hero() {
           <h1 className="hero-name" id="heroName">
             <span className="name-prefix">const</span>
             <span className="name-operator">=</span>
-            <span className="name-value">Developer</span>
+            <span className="name-value">Peter Molope</span>
             <span className="name-suffix">;</span>
           </h1>
           
@@ -76,19 +76,16 @@ export default function Hero() {
           </div>
           
           <div className="hero-social">
-            <a href="#" className="social-icon" title="GitHub">
+            <a href="https://github.com/PeterMolope" className="social-icon" title="GitHub" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-github"></i>
             </a>
-            <a href="#" className="social-icon" title="LinkedIn">
+            <a href="https://www.linkedin.com/in/petermolope-mxv/" className="social-icon" title="LinkedIn" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin-in"></i>
             </a>
-            <a href="#" className="social-icon" title="Twitter">
+            <a href="https://twitter.com/PeterMXV" className="social-icon" title="Twitter" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-twitter"></i>
             </a>
-            <a href="#" className="social-icon" title="CodePen">
-              <i className="fab fa-codepen"></i>
-            </a>
-            <a href="#" className="social-icon" title="Email">
+            <a href="mailto:ptrmolope@gmail.com" className="social-icon" title="Email">
               <i className="fas fa-envelope"></i>
             </a>
           </div>

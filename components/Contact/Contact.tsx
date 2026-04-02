@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { contactInfo } from '../../Constant/Data'
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -30,27 +31,6 @@ export default function Contact() {
     })
   }
 
-  const contactInfo = [
-    {
-      icon: 'fa-envelope',
-      label: 'Email',
-      value: 'developer@example.com',
-      href: 'mailto:developer@example.com'
-    },
-    {
-      icon: 'fa-phone',
-      label: 'Phone',
-      value: '+966 50 123 4567',
-      href: 'tel:+966501234567'
-    },
-    {
-      icon: 'fa-map-marker-alt',
-      label: 'Location',
-      value: 'Riyadh, Saudi Arabia',
-      href: ''
-    }
-  ]
-
   return (
     <section id="contact" className="section contact-section">
       <div className="section-container">
@@ -69,7 +49,7 @@ export default function Contact() {
             {contactInfo.map((item, index) => (
               <div key={index} className="contact-item">
                 <div className="contact-icon">
-                  <i className={`fas ${item.icon}`}></i>
+                  <item.icon size={24} />
                 </div>
                 <div className="contact-details">
                   <h4 className="contact-label">{item.label}</h4>
