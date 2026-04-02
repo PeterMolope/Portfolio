@@ -320,6 +320,10 @@ img {
     transition: all var(--transition);
 }
 
+[data-theme="light"] .menu-toggle span {
+    background: #ffffff;
+}
+
 .menu-toggle.active span:nth-child(1) {
     transform: rotate(45deg) translate(5px, 5px);
 }
