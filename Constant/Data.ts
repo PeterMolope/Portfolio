@@ -135,7 +135,7 @@ export const projects = [
     title: "E-Commerce Platform",
     description:
       "A full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.",
-    image: "/images/p1.jpg",
+    image: "/Portfolio/images/p1.jpg",
     techStack: ["Next.js", "TypeScript", "Stripe", "MongoDB"],
     demoUrl: "https://example.com",
     githubUrl: "https://github.com",
@@ -144,7 +144,7 @@ export const projects = [
     title: "Task Management App",
     description:
       "Collaborative project management tool with real-time updates, Kanban boards, and team analytics.",
-    image: "/portfolio/images/p2.jpg",
+    image: "/Portfolio//images/p2.jpg",
     techStack: ["React", "Node.js", "Socket.io", "PostgreSQL"],
     demoUrl: "https://example.com",
     githubUrl: "https://github.com",
@@ -153,7 +153,7 @@ export const projects = [
     title: "AI Content Generator",
     description:
       "GPT-powered content creation platform for marketers with templates and workflow automation.",
-    image: "/portfolio/images/p3.jpg",
+    image: "/Portfolio/images/p3.jpg",
     techStack: ["React", "Python", "OpenAI", "FastAPI"],
     demoUrl: "https://example.com",
     githubUrl: "https://github.com",
@@ -162,7 +162,7 @@ export const projects = [
     title: "Real Estate Platform",
     description:
       "Property listing platform with virtual tours, mortgage calculator, and agent booking system.",
-    image: "/portfolio/images/p4.jpg",
+    image: "/Portfolio/images/p4.jpg",
     techStack: ["Vue.js", "Node.js", "MongoDB", "Maps API"],
     demoUrl: "https://example.com",
     githubUrl: "https://github.com",
@@ -171,7 +171,7 @@ export const projects = [
     title: "Fitness Tracker",
     description:
       "Cross-platform mobile app for workout tracking, nutrition logging, and progress analytics.",
-    image: "/portfolio/images/p5.jpg",
+    image: "/Portfolio/images/p5.jpg",
     techStack: ["React Native", "Firebase", "Node.js", "Charts"],
     demoUrl: "https://example.com",
     githubUrl: "https://github.com",
@@ -180,7 +180,7 @@ export const projects = [
     title: "Learning Management System",
     description:
       "Educational platform with video streaming, quizzes, progress tracking, and certificates.",
-    image: "/portfolio/images/p6.jpg",
+    image: "/Portfolio/images/p6.jpg",
     techStack: ["Next.js", "Prisma", "AWS S3", "Stripe"],
     demoUrl: "https://example.com",
     githubUrl: "https://github.com",
