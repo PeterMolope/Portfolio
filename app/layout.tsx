@@ -21,6 +21,14 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+        
+        {/* Favicon */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/Portfolio/favicon_io/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/Portfolio/favicon_io/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/Portfolio/favicon_io/favicon-16x16.png" />
+        <link rel="manifest" href="/Portfolio/favicon_io/site.webmanifest" />
+        <link rel="icon" href="/Portfolio/favicon_io/favicon.ico" />
+        <link rel="shortcut icon" href="/Portfolio/favicon_io/favicon.ico" />
       </head>
       <body className="body-main" data-theme="dark" data-lang="en" data-dir="ltr">
         {children}

@@ -57,7 +57,7 @@ export default function Header() {
   const downloadCV = () => {
     // Create a link element for download
     const link = document.createElement('a')
-    link.href = '/portfolio/Peter_Molope_CV.pdf' // Update with actual CV file path
+    link.href = '/Peter_Molope_CV.pdf' // Correct path without basePath prefix
     link.download = 'Peter_Molope_CV.pdf'
     document.body.appendChild(link)
     link.click()
