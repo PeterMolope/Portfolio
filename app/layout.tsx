@@ -1,40 +1,30 @@
-import type { Metadata } from "next";
-import { Inter, JetBrains_Mono } from "next/font/google";
-import "./globals.css";
-import Provider from "@/components/Hoc/Provider";
-import ResponsiveNav from "@/components/Home/Navbar/ResponsiveNav";
+import type { Metadata } from 'next'
+import { Inter } from 'next/font/google'
+import './globals.css'
 
-const jetBrainsMono = JetBrains_Mono({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800"],
-  variable: "--font-jetBrainsMono",
-  subsets: ["latin"],
-});
-
-const inter = Inter({
-  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-  variable: "--font-inter",
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Peter Molope Portfolio",
-  description:
-    " This project leverages the latest features of the Next.js ecosystem to provide a lightning-fast, SEO-optimized platform. By utilizing the App Router, React Server Components, and advanced caching strategies, the application ensures minimal client-side JavaScript while maintaining a highly interactive UI.",
-};
+  title: 'Peter Portfolio - Developer CV',
+  description: 'Passionate developer creating exceptional digital experiences with modern technologies.',
+}
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className} antialiased`}>
-        <Provider>
-          <ResponsiveNav />
-          {children}
-        </Provider>
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;800;900&family=Fira+Code:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+      </head>
+      <body className="body-main" data-theme="dark" data-lang="en" data-dir="ltr">
+        {children}
       </body>
     </html>
-  );
+  )
 }
