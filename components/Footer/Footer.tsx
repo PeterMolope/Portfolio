@@ -13,7 +13,7 @@ export default function Footer() {
             </p>
             <p className="footer-author">
               <span className="footer-by-text">by</span>
-              <a href="https://www.linkedin.com/in/petermolope-mxv/" target="_blank" rel="noopener noreferrer" className="footer-author-link">
+              <a href="https://github.com/PeterMolope" target="_blank" rel="noopener noreferrer" className="footer-author-link">
                 <i className="fas fa-code"></i>
                 <span>Peter Molope</span>
               </a>
