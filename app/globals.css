@@ -277,6 +277,7 @@ img {
 }
 
 .lang-toggle,
+.cv-download,
 .theme-toggle {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -292,13 +293,15 @@ img {
 }
 
 .lang-toggle:hover,
+.cv-download:hover,
 .theme-toggle:hover {
     border-color: var(--primary);
     color: var(--primary);
     background: rgba(192, 132, 252, 0.1);
 }
 
-.lang-text {
+.lang-text,
+.cv-text {
     font-weight: 600;
 }
 
@@ -1866,6 +1869,7 @@ img {
     }
     
     .lang-toggle,
+    .cv-download,
     .theme-toggle {
         padding: 0.5rem 0.8rem;
         font-size: 0.8rem;

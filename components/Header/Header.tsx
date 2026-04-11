@@ -54,6 +54,16 @@ export default function Header() {
     setIsMenuOpen(false)
   }
 
+  const downloadCV = () => {
+    // Create a link element for download
+    const link = document.createElement('a')
+    link.href = '/portfolio/Peter_Molope_CV.pdf' // Update with actual CV file path
+    link.download = 'Peter_Molope_CV.pdf'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
+  }
+
   return (
     <header className={`main-header ${isScrolled ? 'scrolled' : ''}`}>
       <nav className="nav-container">
@@ -83,6 +93,10 @@ export default function Header() {
           <button className="lang-toggle" onClick={toggleLang} title="Toggle Language">
             <i className="fas fa-language"></i>
             <span className="lang-text">{currentLang === 'en' ? 'EN' : 'EN'}</span>
+          </button>
+          <button className="cv-download" onClick={downloadCV} title="Download CV">
+            <i className="fas fa-download"></i>
+            <span className="cv-text">CV</span>
           </button>
           <button className="theme-toggle" onClick={toggleTheme} title="Toggle Theme">
             <i className={`fas fa-${currentTheme === 'dark' ? 'sun' : 'moon'}`}></i>
