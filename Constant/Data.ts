@@ -135,7 +135,7 @@ export const projects = [
     title: "E-Commerce Platform",
     description:
       "A full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.",
-    image: "/portfolio/images/p1.jpg",
+    image: "/images/p1.jpg",
     techStack: ["Next.js", "TypeScript", "Stripe", "MongoDB"],
     demoUrl: "https://example.com",
     githubUrl: "https://github.com",
