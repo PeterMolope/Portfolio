@@ -176,9 +176,9 @@ This project is licensed under the MIT License.
 
 For inquiries or collaboration, please use the contact form in the portfolio or reach out via:
 
-- Email: developer@example.com
-- LinkedIn: [Profile Link]
-- GitHub: [Profile Link]
+- Email: ptrmolope@gmail.com
+- LinkedIn: https://www.linkedin.com/in/petermolope-mxv/
+- GitHub: https://github.com/PeterMolope
 
 ---
 
