@@ -132,58 +132,22 @@ export const footerSocialLinks = [
 
 export const projects = [
   {
-    title: "E-Commerce Platform",
+    title: "InMyFridge | React Native Mobile Application",
     description:
-      "A full-stack e-commerce solution with real-time inventory, payment processing, and admin dashboard.",
+      "Developed a mobile-only application using React Native to help users track home ingredients and reduce food waste. Built a specialized mobile UI for virtual inventory management, including expiration tracking and ingredient-based search. Integrated a Recipe API to provide meal suggestions based on current fridge contents. Focused on creating a lightweight, mobile-first experience for quick meal planning on the go.",
     image: "/Portfolio/images/p1.jpg",
-    techStack: ["Next.js", "TypeScript", "Stripe", "MongoDB"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com",
+    techStack: ["React Native", "Recipe API", "Mobile UI", "Inventory Management"],
+    demoUrl: "https://github.com/PeterMolope/InMyFridge",
+    githubUrl: "https://github.com/PeterMolope/InMyFridge",
   },
   {
-    title: "Task Management App",
+    title: "Reverb Tech E-commerce Application (Full-Stack)",
     description:
-      "Collaborative project management tool with real-time updates, Kanban boards, and team analytics.",
-    image: "/Portfolio//images/p2.jpg",
-    techStack: ["React", "Node.js", "Socket.io", "PostgreSQL"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    title: "AI Content Generator",
-    description:
-      "GPT-powered content creation platform for marketers with templates and workflow automation.",
-    image: "/Portfolio/images/p3.jpg",
-    techStack: ["React", "Python", "OpenAI", "FastAPI"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    title: "Real Estate Platform",
-    description:
-      "Property listing platform with virtual tours, mortgage calculator, and agent booking system.",
-    image: "/Portfolio/images/p4.jpg",
-    techStack: ["Vue.js", "Node.js", "MongoDB", "Maps API"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    title: "Fitness Tracker",
-    description:
-      "Cross-platform mobile app for workout tracking, nutrition logging, and progress analytics.",
-    image: "/Portfolio/images/p5.jpg",
-    techStack: ["React Native", "Firebase", "Node.js", "Charts"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com",
-  },
-  {
-    title: "Learning Management System",
-    description:
-      "Educational platform with video streaming, quizzes, progress tracking, and certificates.",
-    image: "/Portfolio/images/p6.jpg",
-    techStack: ["Next.js", "Prisma", "AWS S3", "Stripe"],
-    demoUrl: "https://example.com",
-    githubUrl: "https://github.com",
+      "Developed the entire Frontend UI using React.js and Vite, emphasizing component-based architecture and modularity. Implemented responsive design across all pages using Tailwind CSS, ensuring optimal viewing on mobile, tablet, and desktop devices. Managed application-wide state (shopping cart, user session) efficiently using the Zustand library. Utilized React Router DOM for client-side routing, delivering a fast and seamless navigation experience. Designed and built simulated Admin Panel.",
+    image: "/Portfolio/images/p2.jpg",
+    techStack: ["React.js", "Vite", "Tailwind CSS", "Zustand", "React Router DOM"],
+    demoUrl: "https://github.com/PeterMolope/Reverb-Tech/",
+    githubUrl: "https://github.com/PeterMolope/Reverb-Tech/",
   },
 ];
 
