@@ -4,9 +4,6 @@
 #
 name: Deploy Next.js site to Pages
 
- 
-          
-
 on:
   # Runs on pushes targeting the default branch
   push:
@@ -30,14 +27,15 @@ concurrency:
 jobs:
   # Build job
   build:
-      - name: Build Project
-        env:
-          
-          NEXT_PUBLIC_FORMSPREE_FORM_ID: ${{ secrets.NEXT_PUBLIC_FORMSPREE_FORM_ID }}
-          
-        run: npm run build
     runs-on: ubuntu-latest
     steps:
+      - name: Build Project
+        env:
+          # For Next:
+          NEXT_PUBLIC_FORMSPREE_FORM_ID: ${{ secrets.NEXT_PUBLIC_FORMSPREE_FORM_ID }}
+          
+          
+        run: npm run build
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
