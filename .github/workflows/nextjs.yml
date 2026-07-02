@@ -4,6 +4,12 @@
 #
 name: Deploy Next.js site to Pages
 
+env:
+          
+          NEXT_PUBLIC_FORMSPREE_FORM_ID: ${{ secrets.NEXT_PUBLIC_FORMSPREE_FORM_ID }}
+          
+          
+
 on:
   # Runs on pushes targeting the default branch
   push:
