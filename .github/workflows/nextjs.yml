@@ -29,13 +29,6 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Build Project
-        env:
-          # For Next:
-          NEXT_PUBLIC_FORMSPREE_FORM_ID: ${{ secrets.NEXT_PUBLIC_FORMSPREE_FORM_ID }}
-          
-          
-        run: npm run build
       - name: Checkout
         uses: actions/checkout@v4
       - name: Detect package manager
@@ -80,8 +73,13 @@ jobs:
             ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/yarn.lock') }}-
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+      
       - name: Build with Next.js
+        env:
+          NEXT_PUBLIC_FORMSPREE_FORM_ID: ${{ secrets.NEXT_PUBLIC_FORMSPREE_FORM_ID }}
+          
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
