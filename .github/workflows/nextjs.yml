@@ -30,10 +30,8 @@ concurrency:
 jobs:
   # Build job
   build:
-  env:
-          
-          NEXT_PUBLIC_FORMSPREE_FORM_ID: ${{ secrets.NEXT_PUBLIC_FORMSPREE_FORM_ID }}
-         
+    env:
+      NEXT_PUBLIC_FORMSPREE_FORM_ID: ${{ secrets.NEXT_PUBLIC_FORMSPREE_FORM_ID }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
