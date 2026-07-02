@@ -10,6 +10,8 @@ export default function Contact() {
     subject: '',
     message: ''
   })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target
@@ -19,16 +21,37 @@ export default function Contact() {
     }))
   }
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    console.log('Form submitted:', formData)
-    alert('Message sent successfully!')
-    setFormData({
-      name: '',
-      email: '',
-      subject: '',
-      message: ''
-    })
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      const response = await fetch('https://formspree.io/f/xdarpean', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      })
+
+      if (response.ok) {
+        setSubmitStatus('success')
+        setFormData({
+          name: '',
+          email: '',
+          subject: '',
+          message: ''
+        })
+      } else {
+        setSubmitStatus('error')
+      }
+    } catch (error) {
+      setSubmitStatus('error')
+      console.error('Form submission error:', error)
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -108,10 +131,26 @@ export default function Contact() {
                 required
               ></textarea>
             </div>
-            <button type="submit" className="btn btn-primary btn-submit">
-              <span>Send Message</span>
+            <button 
+              type="submit" 
+              className="btn btn-primary btn-submit"
+              disabled={isSubmitting}
+            >
+              <span>{isSubmitting ? 'Sending...' : 'Send Message'}</span>
               <i className="fas fa-paper-plane"></i>
             </button>
+            
+            {submitStatus === 'success' && (
+              <div className="form-success-message">
+                Message sent successfully!
+              </div>
+            )}
+            
+            {submitStatus === 'error' && (
+              <div className="form-error-message">
+                Failed to send message. Please try again.
+              </div>
+            )}
           </form>
         </div>
       </div>
